@@ -1,0 +1,19 @@
+// Prebuilt vendor libs in this tree link against the SONAME
+// libtinyxml2-v34.so (from newer AOSP bases). The A16.0.0_r2 base only
+// provides "libtinyxml2", so provide the versioned name as a vendor module.
+// (tinyxml2.cpp copied from external/tinyxml2; upstream GPL-2.0 doc dir excluded.)
+cc_library {
+    name: "libtinyxml2-v34",
+    vendor: true,
+    srcs: ["tinyxml2.cpp"],
+    local_include_dirs: ["."],
+    export_include_dirs: ["."],
+    cflags: [
+        "-Wall",
+        "-Werror",
+        "-Wno-implicit-fallthrough",
+        "-DDEBUG",
+        "-DANDROID_NDK",
+    ],
+    shared_libs: ["liblog"],
+}

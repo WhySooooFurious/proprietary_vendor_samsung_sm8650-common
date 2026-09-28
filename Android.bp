@@ -11364,7 +11364,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libaudiofeaturestats.so",
             ],
             shared_libs: [
-                "libprotobuf-cpp-lite",
+                "libprotobuf-cpp-lite-21.7",
                 "liblog",
                 "libqcc_sdk",
                 "libprotobuf-cpp-full",
@@ -15115,7 +15115,7 @@ cc_prebuilt_library_shared {
                 "libloc_util",
                 "libloc_base_util",
                 "libloc_mq_client",
-                "libprotobuf-cpp-lite",
+                "libprotobuf-cpp-lite-21.7",
                 "libwifiobserver",
                 "libizat_client_api",
                 "liblocation_api",
@@ -15867,7 +15867,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libgps.utils",
                 "liblog",
-                "libprotobuf-cpp-lite",
+                "libprotobuf-cpp-lite-21.7",
                 "libc++",
                 "libc",
                 "libm",
@@ -15894,7 +15894,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libgps.utils",
                 "liblocation_api_msg",
-                "libprotobuf-cpp-lite",
+                "libprotobuf-cpp-lite-21.7",
                 "liblog",
                 "libc++",
                 "libc",
@@ -15922,7 +15922,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libgps.utils",
                 "liblocation_api_msg",
-                "libprotobuf-cpp-lite",
+                "libprotobuf-cpp-lite-21.7",
                 "liblog",
                 "libc++",
                 "libc",
@@ -17812,7 +17812,7 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "liblog",
                 "libutils",
-                "libprotobuf-cpp-lite",
+                "libprotobuf-cpp-lite-21.7",
                 "libbinder",
                 "libbase",
                 "libz",
@@ -19052,7 +19052,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libqsh.so",
             ],
             shared_libs: [
-                "libprotobuf-cpp-lite",
+                "libprotobuf-cpp-lite-21.7",
                 "liblog",
                 "libsensorslog",
                 "libcutils",
@@ -19086,7 +19086,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libqshcamera.so",
             ],
             shared_libs: [
-                "libprotobuf-cpp-lite",
+                "libprotobuf-cpp-lite-21.7",
                 "libsnsapi",
                 "libc++",
                 "libc",
@@ -21489,7 +21489,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libsnsapi.so",
             ],
             shared_libs: [
-                "libprotobuf-cpp-lite",
+                "libprotobuf-cpp-lite-21.7",
                 "libcutils",
                 "libutils",
                 "libqmi_common_so",
@@ -21519,7 +21519,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libsnsdiaglog.so",
             ],
             shared_libs: [
-                "libprotobuf-cpp-lite",
+                "libprotobuf-cpp-lite-21.7",
                 "liblog",
                 "libdiag",
                 "libsensorslog",
@@ -23806,7 +23806,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libsns_direct_channel_stub",
                 "libcdsprpc",
-                "libprotobuf-cpp-lite",
+                "libprotobuf-cpp-lite-21.7",
                 "liblog",
                 "libsnsapi",
                 "libqsh",
@@ -27829,7 +27829,7 @@ cc_prebuilt_binary {
                 "libcutils",
                 "liblog",
                 "libutils",
-                "libprotobuf-cpp-lite",
+                "libprotobuf-cpp-lite-21.7",
                 "libqcc_file_agent",
                 "libqcc_sdk",
                 "libqmi_cci",
@@ -28191,7 +28191,7 @@ cc_prebuilt_binary {
                 "libutils",
                 "libcutils",
                 "libspcom",
-                "libprotobuf-cpp-lite",
+                "libprotobuf-cpp-lite-21.7",
                 "libbinder_ndk",
                 "libz",
                 "libcrypto",
@@ -28650,4 +28650,26 @@ install_symlink {
     soc_specific: true,
     installed_location: "lib64/libq3dtools_adreno.so",
     symlink_target: "/vendor/lib64/egl/libq3dtools_adreno.so",
+}
+
+cc_library {
+    name: "libprotobuf-cpp-lite-21.7",
+    host_supported: true,
+    ramdisk_available: true,
+    recovery_available: true,
+    vendor_available: true,
+    vendor_ramdisk_available: true,
+    product_available: true,
+    double_loadable: true,
+    defaults: ["libprotobuf-cpp-lite-defaults"],
+    target: {
+        windows: {
+            enabled: true,
+        },
+    },
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+    min_sdk_version: "29",
 }

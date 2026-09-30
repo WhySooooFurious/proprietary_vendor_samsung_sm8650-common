@@ -1054,7 +1054,6 @@ PRODUCT_PACKAGES += \
     libmmosal \
     libmmparser_lite \
     TimeService \
-    EuiccGoogle \
     uimservicelibrary \
     android.hardware.gnss-aidl-service-qti.xml \
     atfwd-saidl.xml \

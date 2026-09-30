@@ -966,6 +966,8 @@ PRODUCT_PACKAGES += \
     sensors.flicker \
     sensors.grip \
     sensors.qsh \
+    libssc_default_listener \
+    libssc_default_listener \
     service-listener-ext-aidl-V1-ndk \
     libQnnHtp \
     libQnnHtpV75Stub \

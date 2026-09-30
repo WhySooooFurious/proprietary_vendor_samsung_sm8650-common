@@ -28653,3 +28653,28 @@ install_symlink {
 }
 
 
+cc_prebuilt_library_shared {
+    name: "libssc_default_listener",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libssc_default_listener.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libsdsprpc",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}

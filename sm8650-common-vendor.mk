@@ -967,7 +967,6 @@ PRODUCT_PACKAGES += \
     sensors.grip \
     sensors.qsh \
     libssc_default_listener \
-    libssc_default_listener \
     service-listener-ext-aidl-V1-ndk \
     libQnnHtp \
     libQnnHtpV75Stub \
@@ -1151,3 +1150,10 @@ PRODUCT_PACKAGES += \
     vendor_lib64_libEGL_adreno_so \
     vendor_lib64_libGLESv2_adreno_so \
     vendor_lib64_libq3dtools_adreno_so
+
+# Exynoobs Samsung audio configs (AGM/PAL/primary HAL)
+PRODUCT_COPY_FILES += \
+    vendor/samsung/sm8650-common/proprietary/vendor/etc/audio/sku_pineapple/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_pineapple/mixer_paths.xml \
+    vendor/samsung/sm8650-common/proprietary/vendor/etc/audio/sku_pineapple/resourcemanager.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_pineapple/resourcemanager.xml \
+    vendor/samsung/sm8650-common/proprietary/vendor/etc/audio/sku_pineapple/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_pineapple/audio_policy_configuration.xml \
+    vendor/samsung/sm8650-common/proprietary/vendor/etc/audio/sku_pineapple/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_pineapple/audio_effects.conf

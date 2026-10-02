@@ -28678,3 +28678,150 @@ cc_prebuilt_library_shared {
     prefer: true,
     soc_specific: true,
 }
+
+# Exynoobs Samsung audio stack (AGM/PAL/AGMIPC/primary HAL) prebuilt overrides
+cc_prebuilt_library_shared {
+    name: "audio.primary.pineapple",
+    owner: "samsung",
+    vendor: true,
+    relative_install_path: "hw",
+    vintf_fragments: ["proprietary/vendor/etc/vintf/manifest_audio_sm8650.xml"],
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/hw/audio.primary.pineapple.so"],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.audio@7.1-impl.samsung-sm8650",
+    owner: "samsung",
+    vendor: true,
+    relative_install_path: "hw",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/hw/android.hardware.audio@7.1-impl.samsung-sm8650.so"],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libagm",
+    owner: "samsung",
+    vendor: true,
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libagm.so"],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libagmclient",
+    owner: "samsung",
+    vendor: true,
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libagmclient.so"],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libagmmixer",
+    owner: "samsung",
+    vendor: true,
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libagmmixer.so"],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libagm_pcm_plugin",
+    owner: "samsung",
+    vendor: true,
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libagm_pcm_plugin.so"],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libagm_compress_plugin",
+    owner: "samsung",
+    vendor: true,
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libagm_compress_plugin.so"],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libagm_mixer_plugin",
+    owner: "samsung",
+    vendor: true,
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libagm_mixer_plugin.so"],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libar-pal",
+    owner: "samsung",
+    vendor: true,
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libar-pal.so"],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaudiochargerlistener",
+    owner: "samsung",
+    vendor: true,
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libaudiochargerlistener.so"],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.AGMIPC@1.0-impl",
+    owner: "samsung",
+    vendor: true,
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so"],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+}

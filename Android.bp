@@ -2,14 +2,6 @@
 // Automatically generated file. DO NOT MODIFY
 //
 
-soong_namespace {
-    imports: [
-        "device/samsung/sm8650-common",
-        "hardware/qcom-caf/wlan",
-        "hardware/samsung",
-    ],
-}
-
 cc_prebuilt_library_shared {
     name: "SWPD_libTsAf",
     owner: "samsung",
